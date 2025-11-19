@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A‑Level Accounts: Amendments Activity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <header class="banner">
+      <div class="banner-inner">
+        <div class="activity-badge">ACTIVITY</div>
+        <h1>Amendments to Statement of Financial Position and Income Statement</h1>
+        <p class="subtitle">Make the six amendments and enter the adjusted figures. Cells turn <span class="ok">green</span> if correct and <span class="bad">red</span> if incorrect.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="instructions card">
+        <h2>Task: 6 Amendments</h2>
+        <ol id="amendments-list">
+          <li>[A1] Property increases by <strong>$1,000</strong> for a new building, financed 50% by a long‑term bank loan and 50% by new share capital.</li>
+          <li>[A2] Reduce inventories by <strong>10%</strong> of the current inventory value.</li>
+          <li>[A3] Remove specific trade receivables of <strong>$90</strong>.</li>
+          <li>[A4] Reduce goodwill by <strong>50%</strong>.</li>
+          <li>[A5] Use cash to reduce the overdraft by <strong>50%</strong>.</li>
+          <li>[A6] New share capital of <strong>$1,200</strong> is issued to acquire IP of a comic book character.</li>
+        </ol>
+        <p class="note">Enter your final adjusted balances in the accounts. All totals update automatically.</p>
+      </section>
+
+      <section class="grid-2">
+        <div class="card">
+          <h2>Estimated statement of financial position</h2>
+
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="2" class="left">ASSETS</th>
+                  <th class="right">$m</th>
+                  <th class="right">$m</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="section"><td colspan="4">Non-current assets</td></tr>
+                <tr>
+                  <td colspan="2" class="left">Property</td>
+                  <td class="right"><input data-input="property" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="left">Equipment</td>
+                  <td class="right"><input data-input="equipment" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="left">Goodwill / IP</td>
+                  <td class="right"><input data-input="goodwill" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+
+                <tr class="section"><td colspan="4">Current assets</td></tr>
+                <tr>
+                  <td colspan="2" class="left">Inventories</td>
+                  <td class="right"><input data-input="inventories" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="left">Trade receivables</td>
+                  <td class="right"><input data-input="receivables" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="left">Cash</td>
+                  <td class="right"><input data-input="cash" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+
+                <tr class="total">
+                  <td colspan="2" class="left">TOTAL ASSETS</td>
+                  <td class="right"></td>
+                  <td class="right"><span data-check="total-assets"></span></td>
+                </tr>
+
+                <tr class="spacer"><td colspan="4"></td></tr>
+                <tr>
+                  <th colspan="2" class="left">EQUITY AND LIABILITIES</th>
+                  <th class="right">$m</th>
+                  <th class="right">$m</th>
+                </tr>
+
+                <tr class="section"><td colspan="4">Current liabilities</td></tr>
+                <tr>
+                  <td colspan="2" class="left">Trade payables</td>
+                  <td class="right"><input data-input="payables" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="left">Overdraft</td>
+                  <td class="right"><input data-input="overdraft" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+
+                <tr class="section"><td colspan="4">Non-current liabilities</td></tr>
+                <tr>
+                  <td colspan="2" class="left">Bank loan</td>
+                  <td class="right"><input data-input="bankloan" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+
+                <tr class="total">
+                  <td colspan="2" class="left">TOTAL LIABILITIES</td>
+                  <td class="right"></td>
+                  <td class="right"><span data-check="total-liabs"></span></td>
+                </tr>
+
+                <tr class="section"><td colspan="4">Shareholders' equity</td></tr>
+                <tr>
+                  <td colspan="2" class="left">Share capital</td>
+                  <td class="right"><input data-input="sharecap" type="number" /></td>
+                  <td class="right"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="left">Retained earnings (closing)</td>
+                  <td class="right"><span data-check="retained"></span></td>
+                  <td class="right"></td>
+                </tr>
+
+                <tr class="total emph">
+                  <td colspan="2" class="left">TOTAL EQUITY AND LIABILITIES</td>
+                  <td class="right"></td>
+                  <td class="right"><span data-check="total-eq-liabs"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Estimated statement of profit or loss</h2>
+
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="left">Item</th>
+                  <th class="right base-col">Base $</th>
+                  <th class="right">Amount $</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="left">Revenue</td>
+                  <td class="right" data-id="base-revenue"></td>
+                  <td class="right"><input data-input="revenue" type="number" /></td>
+                </tr>
+                <tr>
+                  <td class="left">Cost of sales</td>
+                  <td class="right" data-id="base-cogs"></td>
+                  <td class="right"><input data-input="cogs" type="number" /></td>
+                </tr>
+                <tr class="total">
+                  <td class="left">Gross profit</td>
+                  <td class="right" data-id="base-gross"></td>
+                  <td class="right"><span data-check="gross"></span></td>
+                </tr>
+
+                <tr>
+                  <td class="left">Overhead expenses</td>
+                  <td class="right" data-id="base-exp-total"></td>
+                  <td class="right"><input data-input="overheads" type="number" /></td>
+                </tr>
+
+                <tr class="total">
+                  <td class="left">Profit from operations</td>
+                  <td class="right" data-id="base-op"></td>
+                  <td class="right"><span data-check="op"></span></td>
+                </tr>
+                <tr>
+                  <td class="left">Interest paid</td>
+                  <td class="right" data-id="base-interest"></td>
+                  <td class="right"><input data-input="interest" type="number" /></td>
+                </tr>
+                <tr class="total">
+                  <td class="left">Profit before tax</td>
+                  <td class="right" data-id="base-pbt"></td>
+                  <td class="right"><span data-check="pbt"></span></td>
+                </tr>
+                <tr>
+                  <td class="left">Corporation tax @ 20%</td>
+                  <td class="right" data-id="base-tax"></td>
+                  <td class="right"><span data-check="tax"></span></td>
+                </tr>
+                <tr class="total emph">
+                  <td class="left">Profit for the year</td>
+                  <td class="right" data-id="base-paty"></td>
+                  <td class="right"><span data-check="paty"></span></td>
+                </tr>
+                <tr>
+                  <td class="left">Dividends paid</td>
+                  <td class="right" data-id="base-dividends"></td>
+                  <td class="right"><input data-input="dividends" type="number" /></td>
+                </tr>
+                <tr class="total">
+                  <td class="left">Retained earnings (closing)</td>
+                  <td class="right" data-id="base-retained-closing"></td>
+                  <td class="right"><span data-check="reclosing"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Score</h2>
+        <div class="score">
+          <div><span id="score-correct">0</span>/ <span id="score-total">0</span> correct</div>
+          <button id="reveal">Reveal correct answers</button>
+          <button id="reset">Reset inputs</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="answers-overlay" class="overlay" style="display:none">
+      <div class="overlay-inner">
+        <img id="answers-image" alt="Correct answers" />
+        <div class="overlay-hint">Click anywhere to close</div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="banner-inner">
+        <small>All figures in US dollars. This tool is for learning purposes.</small>
+      </div>
+    </footer>
+
+    <script src="app.js?v=3"></script>
+  </body>
+</html>
